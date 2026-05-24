@@ -1,5 +1,7 @@
 import { FaDroplet, FaUserGroup } from "react-icons/fa6";
 import heroBg from "../assets/images/webpage-BG1.webp";
+// 1. IMPORT YOUR MOBILE BACKGROUND IMAGE HERE:
+import heroBgMobile from "../assets/images/Mobile_BG1.webp"; 
 
 const HeroSection = () => {
   return (
@@ -26,10 +28,18 @@ const HeroSection = () => {
         md:bg-center           /* iPad: centers focal point */
         lg:bg-center           /* Desktop */
       "
+      /* 2. DYNAMICALLY GENERATED RESPONSIVE BACKGROUND IMAGES */
       style={{
-        backgroundImage: `url(${heroBg})`,
+        '--bg-desktop': `url(${heroBg})`,
+        '--bg-mobile': `url(${heroBgMobile})`,
       }}
     >
+      {/* CSS Rule Injection to handle responsive background-images safely */}
+      <style>{`
+        section { background-image: var(--bg-mobile); }
+        @media (min-width: 768px) { section { background-image: var(--bg-desktop); } }
+      `}</style>
+
       {/* Background Tint Overlay */}
       <div className="absolute inset-0 bg-[#88cafb]/15 z-0"></div>
 
@@ -39,14 +49,14 @@ const HeroSection = () => {
           relative
           z-10
           w-full
-          max-w-[1200px]
+          max-w-[1380px]
           mx-auto
           
-          /* CONTAINER PADDING */
+          /* CONTAINER PADDING - CHANGED TO MOVE CONTENT MORE TO THE LEFT */
           px-6
           sm:px-8
-          md:px-12
-          lg:px-6
+          md:px-4                 /* Reduced from 12 to 4 to shift left on iPad */
+          lg:px-0                 /* Reduced from 6 to 2 to shift left on Desktop */
 
           /* LAYOUT SWITCH: Stacked on mobile, side-by-side grid on larger devices */
           grid
@@ -73,7 +83,7 @@ const HeroSection = () => {
             md:text-left
 
             /* CONTENT POSITIONING ADJUSTMENT: Moves the block higher up */
-            -mt-60                /* Shifts up slightly on Mobile */
+            -mt-110                /* Shifts up slightly on Mobile */
             md:-mt-55             /* Shifts up perfectly on iPad / Tablet */
             lg:-mt-24             /* Shifts up beautifully on Desktop layout */
           "
@@ -81,13 +91,14 @@ const HeroSection = () => {
           {/* Main Typography Header */}
           <h1
             className="
+              font-['Signika']
               text-[#0d3b8e]
               font-extrabold
-              tracking-tight
+              tracking-[2px]
               leading-[1.1]
 
               /* TYPOGRAPHY RESPONSIVENESS */
-              text-5xl          /* Mobile */
+              text-6xl          /* Mobile */
               sm:text-6xl       /* Small devices */
               md:text-7xl       /* iPad / Tablet */
               lg:text-7xl       /* Large Desktop */
@@ -124,7 +135,7 @@ const HeroSection = () => {
               md:mx-0
 
               /* WIDTH CONSTRAINTS */
-              max-w-[350px]     /* Mobile width limits */
+              max-w-[300px]     /* Mobile width limits */
               md:max-w-[480px]  /* Tablet width limits */
               lg:max-w-[520px]  /* Desktop width limits */
 
@@ -192,7 +203,6 @@ const HeroSection = () => {
                 text-base
                 md:text-base
                 lg:text-lg
-
               "
             >
               {/* Animation Layer */}

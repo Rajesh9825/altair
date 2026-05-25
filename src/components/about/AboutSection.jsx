@@ -171,16 +171,14 @@ const AboutSection = () => {
 
               <p>
                 Founded with the belief that safe drinking
-                water is a right — not a luxury — Altair
+                water is a right — not a luxury, Altair
                 is dedicated to providing purity and trust
                 in every bottle.
               </p>
 
               <p>
-                Using world-class technology and strict
-                quality control, we ensure every drop meets
-                BIS14543 standards with uncompromising
-                consistency.
+                 We are using world-class technology and uncompromising quality 
+standards. Because for us, purity you can trust isn’t a tagline. It’s a responsibility.
               </p>
             </div>
           </div>

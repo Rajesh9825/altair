@@ -1,6 +1,6 @@
 import heroBg from "../../assets/images/Web-Page-About-Section.webp";
 // 1. IMPORT YOUR DISTRIBUTOR MOBILE BACKGROUND IMAGE HERE:
-import heroBgMobile from "../../assets/images/new_about_bg.jpeg"; 
+import heroBgMobile from "../../assets/images/new_about_bg.webp"; 
 
 const DistributorHero = () => {
   return (

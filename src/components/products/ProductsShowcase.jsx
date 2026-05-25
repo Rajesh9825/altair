@@ -11,42 +11,51 @@ const features = [
 ];
 
 const ProductsShowcase = () => {
+  const handleExploreClick = () => {
+    window.location.href = "/altair/products";
+  };
+
   return (
     <section
       className="
         relative
-        py-28
+        py-32
         overflow-hidden
         bg-gradient-to-b
-        from-[#f8fcff]
+        from-[#f4faff]
         to-white
       "
     >
-      {/* Background Glow */}
+      {/* Premium Background Ambient Orbs */}
       <div
         className="
           absolute
-          top-[-120px]
-          right-[-120px]
-          w-[320px]
-          h-[320px]
+          top-[-10%];
+          right-[-10%]
+          w-[600px]
+          h-[600px]
           rounded-full
-          bg-cyan-100/40
-          blur-3xl
+          bg-gradient-to-br
+          from-cyan-200/30
+          to-blue-200/20
+          blur-[120px]
+          pointer-events-none
         "
       ></div>
 
-      {/* Secondary Glow */}
       <div
         className="
           absolute
-          bottom-[-140px]
-          left-[-140px]
-          w-[360px]
-          h-[360px]
+          bottom-[-10%]
+          left-[-10%]
+          w-[600px]
+          h-[600px]
           rounded-full
-          bg-blue-100/40
-          blur-3xl
+          bg-gradient-to-tr
+          from-blue-200/20
+          to-transparent
+          blur-[120px]
+          pointer-events-none
         "
       ></div>
 
@@ -54,23 +63,27 @@ const ProductsShowcase = () => {
         className="
           relative
           z-10
-          max-w-[1200px]
+          w-full
+          max-w-[1380px]
           mx-auto
           px-6
+          sm:px-8
         "
       >
-        {/* Heading */}
-        <div className="text-center mb-20">
-          
+        {/* Section Heading Header Block */}
+        <div className="text-center mb-24">
           <span
             className="
               inline-block
               px-5
-              py-2
+              py-1.5
               rounded-full
-              bg-[#eef7ff]
-              text-[#1558d6]
-              font-semibold
+              bg-[#0d3b8e]/10
+              text-[#0d3b8e]
+              text-sm
+              font-bold
+              tracking-[2px]
+              uppercase
               mb-6
             "
           >
@@ -79,138 +92,138 @@ const ProductsShowcase = () => {
 
           <h2
             className="
+              font-['Signika']
               text-[#0d3b8e]
               text-4xl
+              sm:text-5xl
               md:text-6xl
               font-extrabold
-              tracking-[-2px]
-              leading-tight
+              tracking-[-1px]
+              leading-[1.1]
               mb-6
             "
           >
-            Pure Hydration <br />
-            in Every Drop
+            Pure Hydration In Every Drop
           </h2>
+
+          <div className="w-16 h-1 bg-cyan-400 rounded-full mx-auto mb-6"></div>
 
           <p
             className="
               text-slate-600
               text-lg
               md:text-xl
-              max-w-[850px]
+              max-w-[750px]
               mx-auto
               leading-relaxed
             "
           >
-            Altair delivers premium packaged drinking
-            water processed through advanced purification
-            technology to ensure purity, freshness and trust.
+            Altair delivers premium packaged drinking water processed through advanced purification 
+            technology to ensure purity, freshness, and safety you can completely rely on.
           </p>
         </div>
 
-        {/* Product Showcase Card */}
+        {/* PREMIUM ULTRA-MODERN SHOWCASE CARD */}
         <div
           className="
             relative
             group
             overflow-hidden
-            rounded-[42px]
-            bg-white
+            rounded-[40px]
+            bg-[#0d2149]
             border
-            border-[#dbeeff]
-            shadow-[0_20px_70px_rgba(13,59,142,0.08)]
+            border-white/10
+            shadow-[0_30px_80px_rgba(13,59,142,0.18)]
             p-8
-            md:p-14
-            hover:-translate-y-2
+            sm:p-12
+            md:p-16
+            hover:-translate-y-1.5
             transition-all
             duration-700
           "
         >
-          {/* Hover Glow */}
+          {/* Subtle Internal Luxury Backlighting Flare */}
           <div
             className="
               absolute
-              inset-0
-              opacity-0
-              group-hover:opacity-100
+              bottom-[-50%]
+              right-[-20%]
+              w-[500px]
+              h-[500px]
+              rounded-full
+              bg-cyan-500/10
+              blur-[80px]
+              group-hover:bg-cyan-500/15
               transition-all
               duration-700
-              bg-gradient-to-br
-              from-cyan-50/60
-              via-transparent
-              to-blue-50/40
+              pointer-events-none
             "
           ></div>
 
-          {/* Decorative Circle */}
-          <div
-            className="
-              absolute
-              top-[-80px]
-              right-[-80px]
-              w-[220px]
-              h-[220px]
-              rounded-full
-              bg-cyan-100/40
-            "
-          ></div>
-
-          {/* Main Grid */}
+          {/* Core Structure Alignment Layout Framework */}
           <div
             className="
               relative
               z-10
               grid
-              lg:grid-cols-[280px_1fr]
-              gap-14
+              grid-cols-1
+              lg:grid-cols-[300px_1fr]
+              gap-12
+              xl:gap-20
               items-center
             "
           >
-            {/* LEFT VISUAL */}
+            {/* LEFT SIDE ARTWORK RINGS LAYER */}
             <div className="relative flex justify-center">
-              
-              {/* Circle Background */}
+              {/* Outer Pulsing Glass Ring */}
               <div
                 className="
                   absolute
-                  w-[160px]
-                  h-[160px]
+                  w-[200px]
+                  h-[200px]
                   rounded-full
                   bg-gradient-to-br
-                  from-cyan-100
-                  to-blue-100
-                  blur-sm
+                  from-cyan-400/20
+                  to-blue-500/5
+                  border
+                  border-white/10
+                  scale-110
+                  group-hover:scale-125
+                  transition-all
+                  duration-700
                 "
               ></div>
 
-              {/* Product Icon */}
+              {/* Core Icon Circular Disc */}
               <div
                 className="
                   relative
-                  w-[150px]
-                  h-[150px]
+                  w-[180px]
+                  h-[180px]
                   rounded-full
-                  bg-white/80
+                  bg-gradient-to-b
+                  from-white/10
+                  to-white/[0.02]
                   backdrop-blur-md
                   border
-                  border-[#dbeeff]
+                  border-white/20
                   flex
                   items-center
                   justify-center
-                  shadow-xl
-
-                  group-hover:scale-105
+                  shadow-2xl
+                  group-hover:border-cyan-400/40
                   transition-all
                   duration-700
                 "
               >
                 <FaDroplet
                   className="
-                    text-[90px]
-                    text-[#1558d6]
-                    drop-shadow-lg
-
-                    group-hover:rotate-6
+                    text-[85px]
+                    text-cyan-400
+                    filter
+                    drop-shadow-[0_0_20px_rgba(34,211,238,0.4)]
+                    group-hover:scale-105
+                    group-hover:rotate-3
                     transition-all
                     duration-700
                   "
@@ -218,13 +231,28 @@ const ProductsShowcase = () => {
               </div>
             </div>
 
-            {/* RIGHT CONTENT */}
-            <div>
-              
+            {/* RIGHT TEXT DETAILS PANEL CONTAINER */}
+            <div className="text-center lg:text-left">
+              <span 
+                className="
+                  inline-block
+                  text-cyan-400
+                  font-bold
+                  tracking-wider
+                  text-sm
+                  uppercase
+                  mb-3
+                "
+              >
+                Premium Category
+              </span>
+
               <h3
                 className="
-                  text-[#0d3b8e]
-                  text-4xl
+                  font-['Signika']
+                  text-white
+                  text-3xl
+                  sm:text-4xl
                   md:text-5xl
                   font-bold
                   leading-tight
@@ -236,56 +264,63 @@ const ProductsShowcase = () => {
 
               <p
                 className="
-                  text-slate-700
-                  text-lg
-                  md:text-xl
+                  text-slate-300
+                  text-base
+                  sm:text-lg
                   leading-relaxed
                   mb-10
-                  max-w-[700px]
+                  max-w-[740px]
+                  mx-auto
+                  lg:mx-0
                 "
               >
-                Purified through advanced RO, UV and Ozone
-                treatment systems, Altair packaged drinking
-                water is crafted to deliver freshness,
-                safety and premium quality in every bottle.
+                Purified through advanced RO, UV, and Ozone treatment systems, Altair packaged drinking 
+                water is masterfully crafted to deliver signature crispness, absolute safety, and 
+                premium hydration values in every single bottle.
               </p>
 
-              {/* Features */}
-              <div className="grid md:grid-cols-2 gap-5">
-                
+              {/* Features Array Rendering Loop */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 {features.map((feature, index) => (
                   <div
                     key={index}
                     className="
                       flex
-                      items-start
+                      items-center
                       gap-4
-
                       group/item
+                      p-3
+                      rounded-2xl
+                      border
+                      border-transparent
+                      hover:border-white/5
+                      hover:bg-white/[0.02]
+                      transition-all
+                      duration-300
                     "
                   >
-                    {/* Icon */}
+                    {/* Feature Shield Check Ring Wrapper */}
                     <div
                       className="
-                        w-10
-                        h-10
+                        w-9
+                        h-9
                         rounded-xl
-                        bg-[#eef7ff]
+                        bg-white/5
                         flex
                         items-center
                         justify-center
                         shrink-0
-
-                        group-hover/item:bg-[#1558d6]
+                        group-hover/item:bg-cyan-400
+                        group-hover/item:shadow-[0_0_15px_rgba(34,211,238,0.4)]
                         transition-all
                         duration-500
                       "
                     >
                       <FaCircleCheck
                         className="
-                          text-[#1558d6]
-
-                          group-hover/item:text-white
+                          text-cyan-400
+                          text-lg
+                          group-hover/item:text-[#0d2149]
                           transition-all
                           duration-500
                         "
@@ -294,9 +329,13 @@ const ProductsShowcase = () => {
 
                     <span
                       className="
-                        text-slate-700
-                        text-lg
-                        leading-relaxed
+                        text-slate-200
+                        group-hover/item:text-white
+                        text-base
+                        sm:text-lg
+                        font-medium
+                        transition-colors
+                        duration-300
                       "
                     >
                       {feature}
@@ -305,51 +344,52 @@ const ProductsShowcase = () => {
                 ))}
               </div>
 
-              {/* CTA */}
-              <button
-                className="
-                  mt-12
-                  group/button
-                  relative
-                  overflow-hidden
-                  px-8
-                  py-4
-                  rounded-2xl
-                  bg-[#1558d6]
-                  text-white
-                  font-semibold
-                  text-lg
-                  shadow-lg
-
-                  hover:-translate-y-1
-                  hover:shadow-[0_15px_35px_rgba(21,88,214,0.3)]
-
-                  transition-all
-                  duration-500
-                "
-              >
-                {/* Shine Animation */}
-                <span
+              {/* Premium Glossy CTA Trigger Wrapper */}
+              <div className="mt-12 flex justify-center lg:justify-start">
+                <button
+                  onClick={handleExploreClick}
                   className="
-                    absolute
-                    top-0
-                    -left-full
-                    w-full
-                    h-full
-                    bg-white/20
-                    skew-x-12
-
+                    group/btn
+                    relative
+                    overflow-hidden
+                    px-10
+                    py-4
+                    rounded-2xl
+                    bg-gradient-to-r
+                    from-cyan-400
+                    to-blue-500
+                    text-[#0d2149]
+                    font-bold
+                    text-lg
+                    shadow-[0_10px_30px_rgba(34,211,238,0.25)]
+                    hover:-translate-y-1
+                    hover:shadow-[0_20px_40px_rgba(34,211,238,0.4)]
                     transition-all
-                    duration-700
-
-                    group-hover/button:left-full
+                    duration-500
                   "
-                ></span>
+                >
+                  {/* Internal Liquid Shine Sheen Layer Overlay */}
+                  <span
+                    className="
+                      absolute
+                      top-0
+                      -left-full
+                      w-full
+                      h-full
+                      bg-white/25
+                      skew-x-12
+                      transition-all
+                      duration-1000
+                      group-hover/btn:left-full
+                    "
+                  ></span>
 
-                <span className="relative z-10">
-                  Explore Products
-                </span>
-              </button>
+                  <span className="relative z-10 text-white font-extrabold tracking-wide">
+                    Explore More
+                  </span>
+                </button>
+              </div>
+
             </div>
           </div>
         </div>

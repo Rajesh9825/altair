@@ -1,18 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import { FaDroplet, FaUserGroup } from "react-icons/fa6";
 import heroBg from "../assets/images/webpage-BG1.webp";
 // 1. IMPORT YOUR MOBILE BACKGROUND IMAGE HERE:
-import heroBgMobile from "../assets/images/new_bg_home1.png"; 
+// import heroBgMobile from "../assets/images/new_bg_home1.webp"; 
 
+const heroBgMobile = "https://res.cloudinary.com/dep3ixqlu/image/upload/v1779700498/new_bg_home1_vpgw98.webp"; // Hosted version of the mobile background image for safe access 
 
-const handleExploreProducts = () => {
-    window.location.href = "/altair/products"; // Or use your router push e.g., navigate('/products')
-  };
-
-  const handleBecomeDistributor = () => {
-    window.location.href = "/altair/distributor";
-  };
 
 const HeroSection = () => {
+
+  const navigate = useNavigate();
+
+  const handleExploreProducts = () => {
+      navigate("/products");
+    };
+
+  const handleBecomeDistributor = () => {
+      navigate("/distributor");
+    };
+
+
   return (
     <section
       className="
@@ -44,13 +51,6 @@ const HeroSection = () => {
 
         
         
-          
-          
-      
-          
-          
-          
-
 
 
       "

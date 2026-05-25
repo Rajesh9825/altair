@@ -1,6 +1,6 @@
 import heroBg from "../../assets/images/Web-Page-About-Section.webp";
 // 1. IMPORT YOUR PRODUCTS MOBILE BACKGROUND IMAGE HERE:
-import heroBgMobile from "../../assets/images/Mobile-Web-BG.webp"; 
+import heroBgMobile from "../../assets/images/new_about_bg.jpeg"; 
 
 const ProductsHero = () => {
   return (
@@ -19,8 +19,13 @@ const ProductsHero = () => {
 
         /* 2. BACKGROUND SETTINGS */
         bg-[#88cafb]
-        bg-cover
         bg-no-repeat
+
+
+        # 3. IMAGE SETTINGS */
+        bg-cover
+        md:bg-cover
+        lg:bg-cover
 
         /* 3. IMAGE POSITIONING */
         bg-[center_40%]    /* Mobile: shifts image over so text remains readable */

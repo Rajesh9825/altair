@@ -1,7 +1,7 @@
 import { FaDroplet, FaUserGroup } from "react-icons/fa6";
 import heroBg from "../assets/images/webpage-BG1.webp";
 // 1. IMPORT YOUR MOBILE BACKGROUND IMAGE HERE:
-import heroBgMobile from "../assets/images/Mobile-Home-BG.webp"; 
+import heroBgMobile from "../assets/images/new_bg_home1.png"; 
 
 
 const handleExploreProducts = () => {
@@ -23,18 +23,22 @@ const HeroSection = () => {
         items-center
 
         /* 1. HEIGHT SETTINGS */
-        min-h-[125vh]           /* Mobile */
+        min-h-[77vh]           /* Mobile */
         md:min-h-[80vh]        /* iPad / Tablet */
         lg:min-h-[82vh]        /* Desktop */
 
         /* 2. BACKGROUND SETTINGS */
         bg-[#07152e]
-        bg-cover
         bg-no-repeat
+
+        /* 3. IMAGE SETTINGS */
+        bg-contain     /* Mobile: shifts image over so text remains readable */
+        md:bg-cover
+        lg:bg-cover
 
         /* 3. IMAGE POSITIONING */
         
-        bg-[right_40%_top]     /* Mobile: shifts image over so text remains readable */
+        bg-[bottom]    /* Mobile: shifts image over so text remains readable */
         md:bg-center           /* iPad: centers focal point */
         lg:bg-center           /* Desktop */
 
@@ -97,7 +101,7 @@ const HeroSection = () => {
             lg:col-span-6
 
             /* CONTENT SPACING */
-            py-12
+            py-46
             md:py-16
             lg:py-20
 
@@ -106,7 +110,7 @@ const HeroSection = () => {
             md:text-left
 
             /* CONTENT POSITIONING ADJUSTMENT: Moves the block higher up */
-            -mt-110                /* Shifts up slightly on Mobile */
+            -mt-40                /* Shifts up slightly on Mobile */
             md:-mt-55             /* Shifts up perfectly on iPad / Tablet */
             lg:-mt-24             /* Shifts up beautifully on Desktop layout */
           "

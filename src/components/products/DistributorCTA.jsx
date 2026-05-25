@@ -4,34 +4,62 @@ const DistributorCTA = () => {
   return (
     <section
       className="
-        py-24
-        bg-gradient-to-r
-        from-[#0d3b8e]
-        to-[#1558d6]
-        text-white
+        relative
+        overflow-hidden
+        py-28
+        bg-[#1558d6]
       "
     >
-      <div className="max-w-[1200px] mx-auto px-6 text-center">
-        
+      {/* Soft Glow */}
+      <div
+        className="
+          absolute
+          top-[-150px]
+          left-1/2
+          -translate-x-1/2
+          w-[600px]
+          h-[600px]
+          rounded-full
+          bg-cyan-300/10
+          blur-3xl
+        "
+      ></div>
+
+      <div
+        className="
+          relative
+          z-10
+          max-w-[1200px]
+          mx-auto
+          px-6
+          text-center
+        "
+      >
+        {/* Heading */}
         <h2
           className="
-            text-4xl
-            md:text-6xl
-            font-bold
-            mb-6
+            text-white
+            text-5xl
+            md:text-7xl
+            font-extrabold
+            leading-tight
+            tracking-[-3px]
+            mb-8
           "
         >
           Become an Altair Distributor
         </h2>
 
+        {/* Description */}
         <p
           className="
-            text-lg
-            md:text-2xl
-            max-w-[800px]
-            mx-auto
-            mb-10
             text-blue-100
+            text-xl
+            md:text-3xl
+            leading-relaxed
+            max-w-[1000px]
+            mx-auto
+            mb-16
           "
         >
           Partner with Altair and grow with a trusted
@@ -39,26 +67,59 @@ const DistributorCTA = () => {
           to purity and quality.
         </p>
 
+        {/* Button */}
         <Link
           to="/distributor"
           className="
+            group
+            relative
             inline-flex
             items-center
             justify-center
+            overflow-hidden
+
             bg-white
             text-[#0d3b8e]
-            font-semibold
-            text-lg
-            px-8
-            py-4
-            rounded-xl
-            hover:-translate-y-2
-            hover:shadow-[0_15px_35px_rgba(255,255,255,0.25)]
+
+            px-12
+            py-5
+
+            rounded-2xl
+
+            text-xl
+            font-bold
+
+            shadow-xl
+
+            hover:scale-105
+            hover:-translate-y-1
+            hover:shadow-[0_20px_40px_rgba(255,255,255,0.2)]
+
             transition-all
             duration-500
           "
         >
-          Become Distributor
+          {/* Shine Animation */}
+          <span
+            className="
+              absolute
+              top-0
+              -left-full
+              w-full
+              h-full
+              bg-[#1558d6]/10
+              skew-x-12
+
+              transition-all
+              duration-700
+
+              group-hover:left-full
+            "
+          ></span>
+
+          <span className="relative z-10">
+            Become Distributor
+          </span>
         </Link>
       </div>
     </section>

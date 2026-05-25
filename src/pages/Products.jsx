@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import ProductsHero from "../components/products/ProductsHero";
-import ProductsGrid from "../components/products/ProductsGrid";
+import ProductsShowcase from "../components/products/ProductsShowcase";
 import TechnologySection from "../components/products/TechnologySection";
 import DistributorCTA from "../components/products/DistributorCTA";
 
@@ -13,7 +13,7 @@ const Products = () => {
 
       <main className="pt-[100px]">
         <ProductsHero />
-        <ProductsGrid />
+        <ProductsShowcase />
         <TechnologySection />
         <DistributorCTA />
       </main>

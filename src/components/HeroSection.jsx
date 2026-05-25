@@ -1,7 +1,16 @@
 import { FaDroplet, FaUserGroup } from "react-icons/fa6";
 import heroBg from "../assets/images/webpage-BG1.webp";
 // 1. IMPORT YOUR MOBILE BACKGROUND IMAGE HERE:
-import heroBgMobile from "../assets/images/Mobile_BG1.webp"; 
+import heroBgMobile from "../assets/images/Mobile-Home-BG.webp"; 
+
+
+const handleExploreProducts = () => {
+    window.location.href = "/altair/products"; // Or use your router push e.g., navigate('/products')
+  };
+
+  const handleBecomeDistributor = () => {
+    window.location.href = "/altair/distributor";
+  };
 
 const HeroSection = () => {
   return (
@@ -14,19 +23,32 @@ const HeroSection = () => {
         items-center
 
         /* 1. HEIGHT SETTINGS */
-        min-h-[105vh]           /* Mobile */
+        min-h-[125vh]           /* Mobile */
         md:min-h-[80vh]        /* iPad / Tablet */
         lg:min-h-[82vh]        /* Desktop */
 
         /* 2. BACKGROUND SETTINGS */
-        bg-[#88cafb]
+        bg-[#07152e]
         bg-cover
         bg-no-repeat
 
         /* 3. IMAGE POSITIONING */
-        bg-[right_55%_top]     /* Mobile: shifts image over so text remains readable */
+        
+        bg-[right_40%_top]     /* Mobile: shifts image over so text remains readable */
         md:bg-center           /* iPad: centers focal point */
         lg:bg-center           /* Desktop */
+
+        
+        
+          
+          
+      
+          
+          
+          
+
+
+
       "
       /* 2. DYNAMICALLY GENERATED RESPONSIVE BACKGROUND IMAGES */
       style={{
@@ -34,6 +56,7 @@ const HeroSection = () => {
         '--bg-mobile': `url(${heroBgMobile})`,
       }}
     >
+      
       {/* CSS Rule Injection to handle responsive background-images safely */}
       <style>{`
         section { background-image: var(--bg-mobile); }
@@ -41,7 +64,7 @@ const HeroSection = () => {
       `}</style>
 
       {/* Background Tint Overlay */}
-      <div className="absolute inset-0 bg-[#88cafb]/15 z-0"></div>
+      <div className="absolute inset-0 bg-[#07152e]/0 z-0"></div>
 
       {/* Main Framework Container */}
       <div
@@ -49,7 +72,7 @@ const HeroSection = () => {
           relative
           z-10
           w-full
-          max-w-[1380px]
+          max-w-[1150px]
           mx-auto
           
           /* CONTAINER PADDING - CHANGED TO MOVE CONTENT MORE TO THE LEFT */
@@ -174,6 +197,7 @@ const HeroSection = () => {
           >
             {/* Primary Action Call */}
             <button
+              onClick={handleExploreProducts} // Linked functional click handler
               className="
                 group
                 relative
@@ -227,6 +251,7 @@ const HeroSection = () => {
 
             {/* Secondary Action Call */}
             <button
+              onClick={handleBecomeDistributor} // Linked functional click handler
               className="
                 group
                 relative
